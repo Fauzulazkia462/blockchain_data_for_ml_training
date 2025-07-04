@@ -1,10 +1,14 @@
-import csv
 import time
-import numpy as np
 import pandas as pd
 import requests
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from helpers import (
+    read_addresses_from_csv,
+    is_night_tx,
+    std,
+    most_common,
+)
 
 BLOCKSTREAM_API = "https://blockstream.info/api"
 
@@ -113,7 +117,7 @@ def extract_btc_features(txs: list[dict], wallet: str) -> dict:
     )
     return feats
 
-def main(csv_path="./gambling_address_dataset.csv"):
+def run(csv_path="../datasets/BTC/gambling_address_dataset.csv"):
     addresses = read_addresses_from_csv(csv_path)
     print(f"Found {len(addresses)} addresses")
 
@@ -131,8 +135,7 @@ def main(csv_path="./gambling_address_dataset.csv"):
     df = pd.DataFrame(rows)
     pd.set_option("display.max_columns", None)
     pd.set_option("display.width", 150)
-    print("\nFeature DataFrame:\n")
-    print(df)
+    return df
 
 if __name__ == "__main__":
-    main()
+    run()

@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test and coverage files
+.coverage
+.tox/
+.nox/
+pytest_cache/
+
+# mypy / pylint / pyright
+.mypy_cache/
+.pytest_cache/
+.pyright/
+
+# Cache files from tools
+.cache/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Log files
+*.log
+
+# Local data / temp files
+*.sqlite
+*.db
+*.bak
+*.tmp
+
+# Ignore compiled C extensions
+*.so

@@ -80,7 +80,7 @@ def extract_eth_features(txs: list[dict], wallet: str) -> dict:
     )
     return feats
 
-def main(csv_path="./gambling_address_dataset.csv"):
+def run(csv_path="../datasets/ETH/gambling_address_dataset.csv"):
     addresses = read_addresses_from_csv(csv_path)
     print(f"Found {len(addresses)} addresses")
 
@@ -98,8 +98,7 @@ def main(csv_path="./gambling_address_dataset.csv"):
     df = pd.DataFrame(rows)
     pd.set_option("display.max_columns", None)
     pd.set_option("display.width", 150)
-    print("\nFeature DataFrame:\n")
-    print(df)
+    return df
 
 if __name__ == "__main__":
-    main()
+    run()
