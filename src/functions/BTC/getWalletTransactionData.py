@@ -117,7 +117,7 @@ def extract_btc_features(txs: list[dict], wallet: str) -> dict:
     )
     return feats
 
-def run(csv_path="../datasets/BTC/gambling_address_dataset.csv"):
+def run(csv_path):
     addresses = read_addresses_from_csv(csv_path)
     print(f"Found {len(addresses)} addresses")
 

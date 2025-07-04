@@ -80,7 +80,7 @@ def extract_eth_features(txs: list[dict], wallet: str) -> dict:
     )
     return feats
 
-def run(csv_path="../datasets/ETH/gambling_address_dataset.csv"):
+def run(csv_path):
     addresses = read_addresses_from_csv(csv_path)
     print(f"Found {len(addresses)} addresses")
 

@@ -5,11 +5,11 @@ def main():
     user_input = input("Enter chain (ETH / BTC): ").strip().upper()
 
     if user_input == "BTC":
-        btc_df = run_btc()
+        btc_df = run_btc("../datasets/BTC/gambling_address_dataset.csv")
         print("\nBTC DataFrame:\n")
         print(btc_df)
     elif user_input == "ETH":
-        eth_df = run_eth()
+        eth_df = run_eth("../datasets/ETH/gambling_address_dataset.csv")
         print("\nETH DataFrame:\n")
         print(eth_df)
     else:
