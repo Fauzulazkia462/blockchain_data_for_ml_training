@@ -85,6 +85,8 @@ def run(csv_path):
     print(f"Found {len(addresses)} addresses")
 
     rows = []
+    all_txs = {}
+
     for addr in addresses:
         try:
             if addr.lower().startswith("0x"):
@@ -92,13 +94,14 @@ def run(csv_path):
                 txs = fetch_eth_txs(addr)
                 if txs:
                     rows.append(extract_eth_features(txs, addr))
+                    all_txs[addr] = txs
         except Exception as exc:
             print(f"Error with {addr}: {exc}")
 
     df = pd.DataFrame(rows)
     pd.set_option("display.max_columns", None)
     pd.set_option("display.width", 150)
-    return df
+    return df, all_txs
 
 if __name__ == "__main__":
     run()
