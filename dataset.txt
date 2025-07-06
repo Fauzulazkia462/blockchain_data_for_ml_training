@@ -1,0 +1,10 @@
+dataset
+1. jenis dataset yang digunakan adalah dataset yang diambil dari etherscan dengan api untuk mendaptkan beberapa feature
+2. Teknik pengumpulan datanya adalah dengan mencari beberapa contract address yang anomaly dan sudah terindikasi dengan platform perjudian online, kemudian dengan etherscan api kita mengambil data wallet address yang melakukan transaksi dengan contract address tersebut. Setelah kami mengumpulkan wallet address yang anomaly kita melakukan Teknik scanning wallet dengan melakukan hit api etherscan Kembali untuk mendapatkan feature yang dibutuhkan.
+3. dalam memastikan keakuratan data kita melakukan sebelumnnya Analisa abi contract address terlebih dahulu untuk melihat fungsi dari contract address yang digunakan pada transaksi di platform judi.
+3.2 kedua adalah melakukan research dari internet untuk mendapatkan address wallet yang anomaly berdasarkan sentiment laporan yang sudah ada.
+
+POC
+1. menjelaskan bagaimana isolation forest berperan dalam melakukan klasifikasi label untuk menentukan anomaly pada suatu dataset.
+2. menjelaskan peranan features yang digunakan dalam menentukan anomaly dengan shap
+3. melakukan test keakuratan pada concept isolation forest dan features
